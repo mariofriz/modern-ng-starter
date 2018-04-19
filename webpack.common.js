@@ -16,13 +16,9 @@ module.exports = {
       inject: 'body'
     }),
     new webpack.HashedModuleIdsPlugin(),
-    new CopyWebpackPlugin([{
-      from: __dirname + '/src/assets',
-      to: __dirname + '/dist/assets'
-    }]),
     new MiniCssExtractPlugin({
-      filename: "[name].css",
-      chunkFilename: "[id].css"
+      filename: "[name].[chunkHash].css",
+      chunkFilename: "[id].[chunkHash].css"
     })
   ],
   output: {
@@ -31,15 +27,28 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        // Style loader
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'style-loader', 'css-loader']
+      { // Script loader
+        test:  /\.js$/,
+        exclude: /node_modules/,
+        use: ['babel-loader']
       },
-      {
-        // Assets loader
+      { // Style loader
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
+      },
+      { // Assets loader
         test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
-        loader: 'file-loader'
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[hash].[ext]',
+            useRelativePath: true
+          }
+        }]
+      },
+      { // HTML loader
+        test: /\.html$/,
+        use: ['html-loader']
       }
     ]
   }
