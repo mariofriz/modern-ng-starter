@@ -1,5 +1,10 @@
+# editor preferences
 .vscode
 .idea
 
+# build folders
+dist
+
+# npm stuff
 node_modules
 npm-debug.log
