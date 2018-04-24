@@ -30,7 +30,7 @@ module.exports = {
       { // Script loader
         test:  /\.js$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
+        use: ['babel-loader', 'eslint-loader']
       },
       { // Style loader
         test: /\.scss$/,
