@@ -1,4 +1,4 @@
-import './style/index.css';
+import './style/index.scss';
 
 if (process.env.NODE_ENV !== 'production') {
   console.log('Development mode is on');
