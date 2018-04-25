@@ -2,11 +2,11 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: {
-    main: './src/app.js',
+    main:  './src/app.js'
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
@@ -17,8 +17,8 @@ module.exports = {
     }),
     new webpack.HashedModuleIdsPlugin(),
     new MiniCssExtractPlugin({
-      filename: "[name].[chunkHash].css",
-      chunkFilename: "[id].[chunkHash].css"
+      filename: '[name].[chunkHash].css',
+      chunkFilename: '[id].[chunkHash].css'
     })
   ],
   output: {
@@ -28,7 +28,7 @@ module.exports = {
   module: {
     rules: [
       { // Script loader
-        test:  /\.js$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         use: ['babel-loader']
       },

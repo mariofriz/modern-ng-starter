@@ -2,7 +2,7 @@ import dummyComponent from "./dummy.component"
 
 beforeEach(angular.mock.module(dummyComponent))
 
-let sut
+let sut;
 
 beforeEach(angular.mock.inject(($rootScope, $componentController) => {
   const $scope = $rootScope.$new()
