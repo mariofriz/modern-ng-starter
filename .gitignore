@@ -4,6 +4,7 @@
 
 # build folders
 dist
+coverage
 
 # npm stuff
 node_modules
