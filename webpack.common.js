@@ -7,7 +7,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: {
-    main: './src/index.js',
+    main: './src/app.js',
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
@@ -30,7 +30,7 @@ module.exports = {
       { // Script loader
         test:  /\.js$/,
         exclude: /node_modules/,
-        use: ['babel-loader', 'eslint-loader']
+        use: ['babel-loader']
       },
       { // Style loader
         test: /\.scss$/,
