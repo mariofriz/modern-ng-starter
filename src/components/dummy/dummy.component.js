@@ -1,8 +1,6 @@
 import angular from 'angular';
 
-const template = `
-<p>Hello {{ $ctrl.name }}!</p>
-`;
+import template from './dummy.component.html';
 
 class DummyComponent {
   constructor() {

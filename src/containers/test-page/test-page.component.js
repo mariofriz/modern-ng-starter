@@ -1,9 +1,4 @@
-const template = `
-<div class="container">
-  <h1>Title: {{ $ctrl.title }}</h1>
-  <dummy-component></dummy-component>
-</div>
-`;
+import template from './test-page.component.html';
 
 class TestPageComponent {
   constructor() {

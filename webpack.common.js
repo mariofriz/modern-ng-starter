@@ -42,7 +42,7 @@ module.exports = {
           loader: 'file-loader',
           options: {
             name: '[hash].[ext]',
-            useRelativePath: true
+            outputPath: 'assets/'
           }
         }]
       },
