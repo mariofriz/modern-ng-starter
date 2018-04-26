@@ -1,8 +1,6 @@
-.hello {
-  color: blue;
-  background: url('../assets/avatar.png');
+$max-width: 600px;
 
-  .some-other {
-    color: grey;
-  }
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
 }

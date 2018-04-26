@@ -1,17 +1,20 @@
 import angular from 'angular';
-import template from './dummy.component.html';
 
-class DummyController {
+const template = `
+<p>Hello {{ $ctrl.name }}!</p>
+`;
+
+class DummyComponent {
   constructor() {
     this.name = 'world';
   }
 }
 
 const component = {
-  controller: DummyController,
+  controller: DummyComponent,
   template: template
 };
 
-export default angular.module('app.dummy', [])
+export default angular.module('app.components.dummy', [])
   .component('dummyComponent', component)
   .name;
