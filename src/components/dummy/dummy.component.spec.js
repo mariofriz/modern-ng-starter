@@ -14,7 +14,7 @@ describe("dummy component", () => {
     expect(sut).toBeDefined()
   })
 
-  it("should default name to world", () => {
-    expect(sut.name).toBe("world")
+  it("should have a user binding", () => {
+    expect(sut.user).toBeDefined();
   })
 });

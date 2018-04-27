@@ -1,10 +1,23 @@
 import template from './test-page.component.html';
 
 class TestPageComponent {
-  constructor() {
-    this.title = 'This is a test page';
+  constructor(DummyService) {
+    // DI
+    this.dummyService = DummyService;
+
+    // Properties
+    this.user = '';
+  }
+
+  $onInit() {
+    this.dummyService.fetchUser()
+      .then(user => {
+        this.user = user;
+      });
   }
 }
+
+TestPageComponent.$inject = ['DummyService'];
 
 const component = {
   controller: TestPageComponent,

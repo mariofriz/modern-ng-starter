@@ -9,6 +9,7 @@ import ngRoute from 'angular-route';
 import routes from './app.routes';
 
 // import components and containers
+import services from './services/services.module';
 import components from './components/components.module';
 import containers from './containers/containers.module';
 
@@ -17,7 +18,10 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 angular.module('app', [
+  // vendor dependencies
   ngRoute,
+  // app dependencies
+  services,
   components,
   containers
 ]).config(routes);

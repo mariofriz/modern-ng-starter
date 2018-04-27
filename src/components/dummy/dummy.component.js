@@ -2,15 +2,28 @@ import angular from 'angular';
 
 import template from './dummy.component.html';
 
+const bindings = {
+  user: '<'
+};
+
 class DummyComponent {
   constructor() {
-    this.name = 'world';
+    this.user = '';
+  }
+
+  $onChanges(change) {
+    if (change.user && change.user.currentValue !== '') {
+      this.user = Object.assign({}, change.user.currentValue, {
+        name: 'wonderful ' + change.user.currentValue.name
+      });
+    }
   }
 }
 
 const component = {
   controller: DummyComponent,
-  template: template
+  template,
+  bindings
 };
 
 export default angular.module('app.components.dummy', [])
