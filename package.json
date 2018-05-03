@@ -9,7 +9,7 @@
     "dev": "webpack-dev-server --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "lint": "eslint ./src/**/*.js",
-    "i18n:extract": "angular-gettext-cli --files \"./src/**/*.@(js|html)\" --exclude \"**/*.spec.js\" --dest src/i18n/translations.pot --marker-name i18n"
+    "i18n": "angular-gettext-cli --files \"./src/**/*.@(js|html)\" --exclude \"**/*.spec.js\" --dest src/i18n/translations.pot --marker-name i18n"
   },
   "repository": {
     "type": "git",
