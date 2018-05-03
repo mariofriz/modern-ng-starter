@@ -8,7 +8,8 @@
     "test": "jest",
     "dev": "webpack-dev-server --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "lint": "eslint ./src/**/*.js"
+    "lint": "eslint ./src/**/*.js",
+    "i18n:extract": "angular-gettext-cli --files \"./src/**/*.@(js|html)\" --exclude \"**/*.spec.js\" --dest src/i18n/translations.pot --marker-name i18n"
   },
   "repository": {
     "type": "git",
@@ -27,9 +28,12 @@
   "homepage": "https://github.com/mariofriz/modern-ng-starter#readme",
   "dependencies": {
     "angular": "1.6.10",
+    "angular-gettext": "2.3.10",
     "angular-route": "1.6.10"
   },
   "devDependencies": {
+    "angular-gettext-cli": "1.2.0",
+    "angular-gettext-loader": "1.0.1",
     "angular-mocks": "1.6.10",
     "babel-core": "6.26.0",
     "babel-jest": "22.4.3",

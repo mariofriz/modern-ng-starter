@@ -1,9 +1,9 @@
 import angular from 'angular';
-
 import template from './dummy.component.html';
 
 const bindings = {
-  user: '<'
+  user: '<',
+  onUpdate: '&'
 };
 
 class DummyComponent {
@@ -17,6 +17,10 @@ class DummyComponent {
         name: 'wonderful ' + change.user.currentValue.name
       });
     }
+  }
+
+  changeLanguage() {
+    this.onUpdate();
   }
 }
 

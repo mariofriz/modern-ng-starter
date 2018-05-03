@@ -1,6 +1,4 @@
-
-routes.$inject = ['$routeProvider'];
-
+// define routes for the app
 export default function routes($routeProvider) {
   $routeProvider
     .when('/test', {
@@ -8,3 +6,5 @@ export default function routes($routeProvider) {
     })
     .otherwise('/test');
 }
+
+routes.$inject = ['$routeProvider'];

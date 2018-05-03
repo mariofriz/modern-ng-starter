@@ -1,3 +1,7 @@
 <div class="container">
-  <dummy-component user="$ctrl.user"></dummy-component>
+  <p translate>Welcome !</p>
+  <dummy-component
+    user="$ctrl.user"
+    on-update="$ctrl.changeLanguage()"
+  ></dummy-component>
 </div>

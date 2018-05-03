@@ -46,6 +46,10 @@ module.exports = {
           }
         }]
       },
+      { // Translations loader
+        test: /\.po$/,
+        loader: 'angular-gettext-loader'
+      },
       { // HTML loader
         test: /\.html$/,
         use: ['html-loader']
