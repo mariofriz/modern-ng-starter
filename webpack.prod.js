@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const merge = require('webpack-merge');
+const DotEnv = require('dotenv-webpack');
 const common = require('./webpack.common.js');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -32,6 +33,9 @@ module.exports = merge(common, {
     new webpack.BannerPlugin({
       banner: bannerTemplate,
       entryOnly: true
+    }),
+    new DotEnv({
+      path: './env/.env'
     })
   ]
 });

@@ -1,6 +1,6 @@
 export default class ShinyService {
   constructor($http) {
-    this.endpoint = 'https://jsonplaceholder.typicode.com/users';
+    this.endpoint = process.env.API_ENDPOINT;
     this._$http = $http;
   }
 
