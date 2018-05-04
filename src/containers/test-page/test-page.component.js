@@ -1,5 +1,4 @@
 import angular from 'angular';
-import template from './test-page.component.html';
 
 class TestPageComponent {
   constructor(DummyService, gettextCatalog) {
@@ -31,7 +30,7 @@ TestPageComponent.$inject = ['DummyService', 'gettextCatalog'];
 
 const component = {
   controller: TestPageComponent,
-  template: template
+  template: require('./test-page.component.html'),
 };
 
 export default angular.module('app.containers.test-page', [])

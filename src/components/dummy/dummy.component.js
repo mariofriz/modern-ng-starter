@@ -1,5 +1,4 @@
 import angular from 'angular';
-import template from './dummy.component.html';
 
 const bindings = {
   user: '<',
@@ -26,7 +25,7 @@ class DummyComponent {
 
 const component = {
   controller: DummyComponent,
-  template,
+  template: require('./dummy.component.html'),
   bindings
 };
 
