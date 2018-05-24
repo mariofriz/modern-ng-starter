@@ -1,5 +1,5 @@
 // add some styling...
-import './style/index.scss';
+import './assets/index.scss';
 
 // ...and a some framework action
 import angular from 'angular';
