@@ -1,7 +1,14 @@
 import angular from 'angular';
 
-import dummyComponent from './dummy/dummy.component';
+import navbar from './layout/navbar.component';
+
+import todoInput from './todo/todo-input.component';
+import todoList from './todo/todo-list.component';
+import todoFilter from './todo/todo-filter.component';
 
 export default angular.module('app.components', [
-  dummyComponent
+  navbar,
+  todoInput,
+  todoList,
+  todoFilter
 ]).name;

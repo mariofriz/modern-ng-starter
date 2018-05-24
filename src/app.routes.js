@@ -1,10 +1,10 @@
 // define routes for the app
 export default function routes($routeProvider) {
   $routeProvider
-    .when('/test', {
-      template: '<test-page></test-page>'
+    .when('/', {
+      template: '<todo-page></todo-page>'
     })
-    .otherwise('/test');
+    .otherwise('/');
 }
 
 routes.$inject = ['$routeProvider'];

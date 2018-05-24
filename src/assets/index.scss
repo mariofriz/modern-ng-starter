@@ -8,3 +8,16 @@ $max-width: 600px;
 ::placeholder {
   color: gray;
 }
+
+.todo--done {
+  text-decoration: line-through;
+}
+
+button.active {
+  background: black;
+  color: white;
+}
+
+.change-language {
+  float: right;
+}

@@ -1,21 +1,39 @@
 msgid ""
 msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
-"Language-Team: \n"
-"MIME-Version: 1.0\n"
-"X-Generator: Poedit 2.0.7\n"
 "Last-Translator: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language-Team: \n"
 "Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.7\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/components/dummy/dummy.component.html:1
-msgid "Hello {{ $ctrl.user.name }}!"
-msgstr "Hallo {{ $ctrl.user.name }}!"
+#: src/components/layout/navbar.component.js:5
+msgid "Change language"
+msgstr "Sprache ändern"
 
-#: src/containers/test-page/test-page.component.html:2
-msgid "Welcome !"
-msgstr "Willkommen !"
+#: src/components/layout/navbar.component.js:8
+msgid "No todos yet, start by creating a few"
+msgstr "Keine Todos verfügbar, warum schreibst du nicht ein paar ?"
+
+#: src/components/layout/navbar.component.js:7
+msgid "Total number todos: {{ $ctrl.count }}"
+msgstr "Ingesamt {{ $ctrl.count }} todos !"
+
+#: src/components/todo/todo-filter.component.js:4
+msgid "all"
+msgstr "Alle"
+
+#: src/components/todo/todo-filter.component.js:10
+msgid "archived"
+msgstr "Archiv"
+
+#~ msgid "Hello {{ $ctrl.user.name }}!"
+#~ msgstr "Hallo {{ $ctrl.user.name }}!"
+
+#~ msgid "Welcome !"
+#~ msgstr "Willkommen !"

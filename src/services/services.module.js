@@ -1,7 +1,7 @@
 import angular from 'angular';
 
-import DummyService from './dummy.service';
+import TodoService from './todo.service';
 
 export default angular.module('app.services', [])
-  .service('DummyService', DummyService)
+  .service('TodoService', TodoService)
   .name;

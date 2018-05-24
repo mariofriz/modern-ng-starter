@@ -1,7 +1,7 @@
 import angular from 'angular';
 
-import testPage from './test-page/test-page.component';
+import todoPage from './todo-page/todo-page.component';
 
 export default angular.module('app.containers', [
-  testPage
+  todoPage
 ]).name;
