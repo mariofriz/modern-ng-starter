@@ -5,6 +5,7 @@ import './style/index.scss';
 import angular from 'angular';
 import ngRoute from 'angular-route';
 import gettext from 'angular-gettext';
+import ngBus from 'ng-bus';
 
 // import app boostrap files
 import routes from './app.routes';
@@ -19,6 +20,7 @@ angular.module('app', [
   // vendor dependencies
   ngRoute,
   gettext,
+  ngBus,
   // app dependencies
   services,
   components,

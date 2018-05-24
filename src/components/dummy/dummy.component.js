@@ -6,8 +6,25 @@ const bindings = {
 };
 
 class DummyComponent {
-  constructor() {
+  constructor($bus) {
+    this.$bus = $bus;
     this.user = '';
+  }
+
+  $onInit() {
+    this.$bus.subscribe(this, 'init', (data) => {
+      console.log('init', data);
+    });
+
+    this.$bus.emit('init', {
+      time: Date.now()
+    });
+
+    this.$bus.off(this);
+
+    this.$bus.emit('init', {
+      time: Date.now()
+    });
   }
 
   $onChanges(change) {
@@ -22,6 +39,8 @@ class DummyComponent {
     this.onUpdate();
   }
 }
+
+DummyComponent.$inject = ['$bus'];
 
 const component = {
   controller: DummyComponent,
