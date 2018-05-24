@@ -68,6 +68,9 @@
       "env"
     ]
   },
+  "browserslist": [
+    "defaults"
+  ],
   "jest": {
     "collectCoverage": true,
     "collectCoverageFrom": [

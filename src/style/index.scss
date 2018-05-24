@@ -4,3 +4,7 @@ $max-width: 600px;
   max-width: $max-width;
   margin: 0 auto;
 }
+
+::placeholder {
+  color: gray;
+}
