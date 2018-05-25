@@ -1,11 +1,26 @@
+var fs = require('fs');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const DotEnv = require('dotenv-webpack');
 const common = require('./webpack.common.js');
+const argv = require('minimist')(process.argv.slice(2));
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+
+// get info from package.json
 const PACKAGE = require('./package.json');
 
+// parse args to get environment argv['env'] -> 'prod.env' -> '.env'
+let env = '';
+const envPath = './env/';
+if (argv['env'] && fs.existsSync(envPath + argv['env'] + '.env')) {
+  env = argv['env'];
+} else if (fs.existsSync(envPath + 'prod.env')) {
+  env = 'prod';
+}
+console.info('Using .env:', envPath + env + '.env');
+
+// define banner
 const bannerTemplate = `${PACKAGE.name} v${PACKAGE.version}
 (c) ${new Date().getFullYear()} ${PACKAGE.author}`;
 
@@ -35,7 +50,7 @@ module.exports = merge(common, {
       entryOnly: true
     }),
     new DotEnv({
-      path: './env/.env'
+      path: envPath + env + '.env'
     })
   ]
 });
