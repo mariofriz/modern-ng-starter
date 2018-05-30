@@ -1,4 +1,13 @@
 $max-width: 600px;
+$font-stack: -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, “Fira Sans”, “Droid Sans”, “Helvetica Neue”, Arial, sans-serif;
+
+@mixin font-stack() {
+  font-family: $font-stack;
+}
+
+body, h1, h2, h3, h4, h5, h6, input, button {
+  @include font-stack();
+}
 
 .container {
   max-width: $max-width;
