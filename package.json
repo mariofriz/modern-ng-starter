@@ -30,7 +30,7 @@
     "angular": "1.6.10",
     "angular-gettext": "2.3.10",
     "angular-route": "1.6.10",
-    "ng-bus": "0.0.1"
+    "ng-bus": "0.0.2"
   },
   "devDependencies": {
     "angular-gettext-cli": "1.2.0",

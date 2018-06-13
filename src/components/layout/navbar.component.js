@@ -17,7 +17,7 @@ class NavbarComponent {
   $onInit() {
     this.count = 0;
 
-    this.$bus.subscribe(this, 'todo.new', (ev, data) => {
+    this.$bus.subscribe(this, 'todo.new', (data) => {
       this.count++;
     });
   }
@@ -28,6 +28,10 @@ class NavbarComponent {
     } else {
       this.$gettext.setCurrentLanguage('en');
     }
+  }
+
+  $onDestroy() {
+    this.$bus.off(this);
   }
 }
 
